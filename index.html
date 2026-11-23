@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Aliya Haas · Decoding disease</title>
+  <meta name="description" content="Aliya Haas builds machine-learning models and applications, from liver gene-expression models and heart-failure proteomics to ASLingo, an ASL learning prototype." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000'/><text x='5' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white'>AH</text><circle cx='27' cy='21' r='2.4' fill='%233a6cff'/></svg>" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="page-progress"></span></div>
+
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="#top" aria-label="Aliya Haas home">AH<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#scales" data-goto-step="0">Research</a>
+      <a href="#scales" data-goto-step="3">ASLingo</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+    </nav>
+    <a class="header-link" href="https://github.com/aliyaliyuan" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <!-- ============ INTRO ============ -->
+    <section class="intro" aria-labelledby="intro-title">
+      <canvas id="rain-canvas" aria-hidden="true"></canvas>
+      <div class="intro-shade" aria-hidden="true"></div>
+      <div class="intro-visual">
+        <canvas id="cell-canvas" aria-label="Generative illustration of a cell. Hover to inspect it under a microscope lens; click a glowing organelle to jump to a project."></canvas>
+      </div>
+      <div class="intro-copy">
+        <p class="eyebrow"><span></span> Computational Biology &amp; Machine Learning</p>
+        <h1 id="intro-title">Decoding disease<br /><em>for all patients</em></h1>
+        <p class="intro-deck">Hi! I'm Aliya Haas. I love coding and building projects with impact. I build ML models and applications that advance precision medicine to language learning methods.</p>
+        <a class="primary-link" href="#scales" data-goto-step="0">Explore projects <span>↓</span></a>
+      </div>
+      <nav class="sr-only" aria-label="Jump to a project">
+        <a href="#scales" data-goto-step="0">scPrediXcan</a>
+        <a href="#scales" data-goto-step="1">JCAST-HF</a>
+        <a href="#scales" data-goto-step="2">The aging heart</a>
+        <a href="#scales" data-goto-step="3">ASLingo</a>
+      </nav>
+      <div class="intro-meta">
+        <span>Jr. Data Scientist · AbbVie</span>
+        <span>M.S. Bioinformatics · Loyola University Chicago</span>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><i></i><span>Scroll to explore</span></div>
+      <p class="lens-hint" aria-hidden="true">hover the cell to inspect it ⌕<br />click a glowing organelle to jump to a project</p>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="scale-story" id="scales" aria-label="My projects, from scPrediXcan to ASLingo">
+      <div class="stage" id="stage">
+        <canvas class="story-canvas" id="story-canvas" aria-hidden="true"></canvas>
+        <div class="stage-vignette" aria-hidden="true"></div>
+
+        <div class="stage-hud">
+          <div class="hud-top">
+            <span id="modality-label">NEURAL NETWORKS · LIVER scRNA-seq → PLASMA</span>
+            <span class="hud-path">scPrediXcan → JCAST-HF → AGING HEART → ASLINGO</span>
+          </div>
+          <div class="scale-readout">
+            <small id="scale-context">MEAN SPEARMAN ρ ≈ 0.80</small>
+            <strong id="scale-value">17</strong>
+            <span id="scale-name">LIVER CELL-TYPE MODELS</span>
+          </div>
+          <div class="depth-rail" id="depth-rail">
+            <span class="rail-label">INDEX</span>
+            <i data-step="0" class="active"></i><i data-step="1"></i><i data-step="2"></i><i data-step="3"></i>
+            <b id="rail-progress"></b>
+          </div>
+        </div>
+
+        <div class="chapters" id="chapters">
+
+          <article class="chapter active" data-step="0">
+            <p class="chapter-index">01 / 04 · scPrediXcan</p>
+            <h2>Liver cells to<br /><em>plasma biomarkers.</em></h2>
+            <p class="chapter-summary">I generated ML gene expression models for 17 liver cell types from single-cell sequencing data that integrated epigenetic features from Enformer. I use these models to explore how genes in each liver cell type regulate plasma proteins, so we can find general biomarkers in blood.</p>
+            <a class="work-card" href="https://github.com/aliyaliyuan/PlasmaXcan" target="_blank" rel="noopener">
+              <span class="work-type">PLASMAXCAN</span>
+              <strong>Liver cell-type expression models</strong>
+              <p>Single-cell liver data → pseudobulk → Enformer features → one neural network per cell type → plasma protein regulation.</p>
+              <i>View the repository ↗</i>
+            </a>
+            <a class="tutorial-card" href="https://aliyaliyuan.github.io/scPrediCamp" target="_blank" rel="noopener">
+              <span>Want to build models yourself?</span>
+              <strong>Check out this tutorial I built <i>↗</i></strong>
+            </a>
+          </article>
+
+          <article class="chapter" data-step="1">
+            <p class="chapter-index">02 / 04 · JCAST-HF</p>
+            <h2>From transcripts<br /><em>to proteins.</em></h2>
+            <p class="chapter-summary">I used an RNA-seq informed proteomics pipeline to identify novel heart failure biomarkers in LVAD patients using personalized alternatively-spliced protein sequence databases.</p>
+            <a class="work-card" href="https://github.com/aliyaliyuan/JCAST-HF" target="_blank" rel="noopener">
+              <span class="work-type">RNA-SEQ-INFORMED PROTEOMICS · JCAST-HF</span>
+              <strong>Personalized protein databases</strong>
+              <p>STAR → rMATS → JCAST turns each patient's alternative-splicing events into protein sequences for mass-spec searches.</p>
+              <i>View the repository ↗</i>
+            </a>
+          </article>
+
+          <article class="chapter" data-step="2">
+            <p class="chapter-index">03 / 04 · AGING HEART</p>
+            <h2>The aging<br /><em>heart.</em></h2>
+            <p class="chapter-summary">I co-authored a study showing that BubR1 insufficiency drives cardiac hypertrophy, fibrosis and senescence. The transcriptomic changes it causes mirror those in aged hearts and in end-stage heart failure.</p>
+            <a class="work-card" href="https://doi.org/10.1111/acel.70160" target="_blank" rel="noopener">
+              <span class="work-type">AGING CELL · 2025</span>
+              <strong>BubR1 &amp; cardiac aging</strong>
+              <p>Transcriptomic profiling links BubR1 loss to ion-channel, cytoskeletal and contractile pathway disruption.</p>
+              <i>Read the paper ↗</i>
+            </a>
+          </article>
+
+          <article class="chapter" data-step="3">
+            <p class="chapter-index">04 / 04 · ASLINGO</p>
+            <h2 class="logo-title"><img src="assets/aslingo/logo.jpg" alt="ASLingo" width="800" height="224" /></h2>
+            <p class="chapter-summary">ASLingo is a prototype ASL learning tool that helps learners build confidence. It puts the visual side of the language first, with live sign recognition from your camera, and introduces a mini-game: guide a hedgehog around a grocery store and sign each item on your shopping list.</p>
+            <a class="work-card" href="https://aliyaliyuan.github.io/ASLingo/" target="_blank" rel="noopener">
+              <span class="work-type">COMPUTER VISION · MEDIAPIPE</span>
+              <strong>Try the prototype</strong>
+              <p>Live sign recognition, flashcards and the grocery-store game, right in your browser.</p>
+              <i>Open ASLingo ↗</i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about shell" id="about" aria-labelledby="about-title">
+      <div class="section-label"><span>01</span><p>Trajectory</p></div>
+      <div class="about-copy reveal">
+        <h2 id="about-title">Decoding<br /><em>biological questions.</em></h2>
+        <div>
+          <p>I'm a Master's student in Bioinformatics at Loyola University Chicago. I write code and build machine-learning models to answer biological questions and move medicine forward, working across single-cell genomics, transcriptomics and proteomics on high-performance computing clusters.</p>
+          <p>Outside the lab, I'm building ASLingo, a computer-vision app that helps people learn American Sign Language with confidence.</p>
+          <a class="linkedin-btn" href="https://www.linkedin.com/in/aliya-haas/" target="_blank" rel="noopener" aria-label="Aliya Haas on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0a66c2"/><path fill="#fff" d="M5.3 9.4h2.9V19H5.3zM6.75 4.9a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4zM10 9.4h2.8v1.3h.04c.39-.74 1.34-1.52 2.76-1.52 2.95 0 3.5 1.94 3.5 4.47V19h-2.9v-4.76c0-1.14-.02-2.6-1.58-2.6-1.59 0-1.83 1.24-1.83 2.52V19H10z"/></svg><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <ol class="timeline reveal">
+        <li><time>NOW</time><div><span>AbbVie</span><strong>Jr. Data Scientist</strong></div></li>
+        <li><time>→ 2027</time><div><span>Loyola University Chicago</span><strong>M.S. Bioinformatics · May 2027</strong></div></li>
+        <li><time>2024–2025</time><div><span>University of Nebraska Medical Center</span><strong>Data Analyst</strong></div></li>
+        <li><time>2023–2024</time><div><span>Creighton University School of Medicine</span><strong>Research Assistant · Co-author</strong></div></li>
+      </ol>
+      <div class="skills reveal">
+        <span>Python</span><span>R</span><span>SQL</span><span>Java</span><span>Linux</span><span>SLURM</span><span>HPC</span><span>Seurat</span><span>STAR</span><span>rMATS</span><span>JCAST</span><span>MediaPipe</span><span>Flask</span>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="shell projects-inner">
+        <div class="section-label"><span>02</span><p>Projects</p></div>
+        <h2 id="projects-title" class="reveal">Additional<br /><em>projects.</em></h2>
+        <div class="project-list reveal">
+          <a href="https://github.com/aliyaliyuan/PubMedSearch" target="_blank" rel="noopener"><span>Automation</span><strong>PubMedSearch</strong><p>Runs a custom PubMed query, syncs the results to Airtable and posts updates to Slack.</p><i>↗</i></a>
+          <a href="https://github.com/aliyaliyuan/SpectronautToMiST" target="_blank" rel="noopener"><span>Proteomics</span><strong>SpectronautToMiST</strong><p>Finds statistically significant protein-protein interactions between conditions.</p><i>↗</i></a>
+          <a href="https://github.com/aliyaliyuan/searchFASTA" target="_blank" rel="noopener"><span>Utility</span><strong>searchFASTA</strong><p>Converts FASTA files into searchable data frames.</p><i>↗</i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact shell" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title" class="reveal">Interested in this work?<br /><em>Let's talk.</em></h2>
+      <a class="contact-link" href="https://www.linkedin.com/in/aliya-haas/" target="_blank" rel="noopener">linkedin.com/in/aliya-haas <span>↗</span></a>
+      <a class="contact-link" href="https://github.com/aliyaliyuan" target="_blank" rel="noopener">github.com/aliyaliyuan <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="wordmark" href="#top">AH<span>.</span></a>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/aliya-haas/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/aliyaliyuan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Haas+Aliya%5BAuthor%5D" target="_blank" rel="noopener">PubMed</a>
+    </div>
+    <p>© <span id="year"></span> Aliya Haas</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
